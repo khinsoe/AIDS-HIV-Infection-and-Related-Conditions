@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIDS, HIV Infection, and Related Conditions</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .video-slideshow {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 560px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  }
+
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease;
+    text-align: center;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-bottom: 3px solid #333;
+  }
+
+  .slide h2 {
+    margin: 10px 0 5px;
+    font-size: 30px;
+  }
+
+  .slide p {
+    font-size: 18px;
+    color: #ccc;
+    padding: 0 20px;
+  }
+
+  .slide.active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  /* Play/Pause button */
+  .control-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 5;
+  }
+
+  .control-btn:hover {
+    background: rgba(255,255,255,0.6);
+  }
+</style>
+</head>
+<body>
+
+<div class="video-slideshow" id="videoSlideshow">
+
+  <!-- Example slides -->
+  <div class="slide active">
+    <img src="https://i.makeagif.com/media/12-03-2017/tvcj0o.gif" alt="">
+    <h2>AIDS, HIV Infection, and Related Conditions</h2>
+    <p>Patients who have human immunodeficiency virus(HIV) infection or acquired immunodeficiency syndrome (AIDS) may be undiagnosed, and screening can be performed in a dental setting.</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://media2.giphy.com/media/56ROH3LypOQasS1vUP/giphy.gif" alt="">
+    <h2>Risks</h2>
+    <p>Patients who have HIV/AIDS are at increased risk for oral opportunistic infections, cardiovascular disease, and cancer.</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://cdn.shopify.com/s/files/1/0602/5687/8783/files/1_00_00_00-00_00_30_e6cabdc1-9078-4e94-b0e0-e68e2da6acfb_480x480.gif?v=1683338660" alt="">
+    <h2>Complications</h2>
+    <p>Patients who have HIV/AIDS may be at risk for complications from dental treatment such as infection, bleeding, drug interactions, and side effects.</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://gifdb.com/images/thumbnail/taking-a-blood-test-j2e0tvzty8k7y4m9.gif" alt="">
+    <h2>Laboratory Tests</h2>
+    <p>Risk assessment of patients who have HIV involves knowledge of their complete blood count, HIV load, and CD4 lymphocyte count.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://media1.tenor.com/images/cf98422d59129aa59387ec64fa7a5f2c/tenor.gif?itemid=10551152" alt="">
+    <h2>History of ...</h2>
+    <p>Patients with HIV/AIDS are more likely to have a history of tobacco, alcohol, and substance use disorders.</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://d1o50x50snmhul.cloudfront.net/wp-content/uploads/2018/02/13170132/hiv_final_animation_v2.gif" alt="">
+    <h2>What is AIDS?</h2>
+    <p>Acquired immunodeficiency syndrome(AIDS) is the most advanced stage of HIV infection.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://media1.tenor.com/m/L5mVkF1wZo8AAAAC/gorgeous-handsome-good-looking-hunk-beautiful-meet-cute-sincerely-yours-truly-uptv-movie-hallmark.gif" alt="">
+    <h2>HIV</h2>
+    <p>HIV is a bloodborne infectious disease that is transmitted predominantly through intimate sexual contact and by parenteral means.</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://i.gifer.com/origin/6c/6cd1f29f7cad4f2ef17c03363de90fff_w200.gif" alt="">
+    <h2>HIV Virus</h2>
+    <p>HIV is an enveloped RNA retrovirus about 100 nM in diameter</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://thumbs.dreamstime.com/z/diagram-hiv-virus-vector-27191723.jpg" alt="">
+    <h2>Glycoproteins (gp41 and gp120)</h2>
+    <p>Glycoproteins (gp41 and gp120)stud the surface of the envelope and serve as binding domains to human cells.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://cdn5.vectorstock.com/i/1000x1000/83/09/the-structure-of-the-aids-virus-hiv-vector-6578309.jpg" alt="">
+    <h2>Protein Capsid (p24)and RNA</h2>
+    <p>Internal to the envelope is a protein capsid (p24) that surrounds essential viral enzymes(protease, integrase, reverse transcriptase) and an inner core containing RNA.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://i.makeagif.com/media/4-11-2017/_sV-U3.gif" alt="">
+    <h2>CD4þ receptors</h2>
+    <p>The cells most commonly infected are those with CD4þ receptors, including T helper lymphocytes (CD4+ cells) and macrophages. Additional coreceptors that allow HIV to infect human cells include CCR5, CXCR4 (fusin), and CCR2.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://bio.libretexts.org/@api/deki/files/12126/hivpenetrat.gif?revision=1" alt="">
+    <h2>HIV life cycle</h2>
+    <p>HIVinfection occurs in steps: entry, reverse transcription of RNA to DNA, export of the viral DNA from the cytoplasm to the nucleus and integration into the host chromosome,</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://media.giphy.com/media/XSZrqxbv4G0jm/giphy.gif" alt="">
+    <h2>Budding of HIV Virions</h2>
+    <p>transcription, translation, and cleavage of the polyproteins produced, assembly of virions, and budding of virions.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.UivvOwwo-MyDfbkhMhx_4wHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    <h2>HIV Stages</h2>
+    <p>Stage 0: A sequence of discordant test results indicative of early HIV infection in which a negative or indeterminate result was within 180 days of a positive result.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.mDVcHFK06L6V7yorYX1AegHaGG?w=245&h=184&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>p24 antigen</h2>
+    <p>Only p24 antigen and HIV. RNA/DNA are detected and these remain positive throughout all stages.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.ROAq9JcBlpeQvgBd4o7FZAHaE0?w=256&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2> Stage 1: Acute seroconversion syndrome</h2>
+    <p> Symptoms occur within about 1-3 weeks after infection in z70% of infected patients: Fever, weakness, diarrhea, nausea, vomiting, myalgia, headache, weight loss, pharyngitis, skin rashes (roseolalike or urticarial), lymphadenopathy; symptoms clear in about 1-2 weeks.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.pHkcoj99DxjMzlpzaQEKcgHaE-?w=235&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Stage 1</h2>
+    <p> HIV antibody becomes detectable at the end of the seroconversion syndrome. CD4+ lymphocytes begin to decline but remain 500 cells/mm3.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.bsd4PmGKM0ARFZ45UEy8tQHaEE?w=328&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Latent Period</h2>
+    <p> A slow but usually steady increase in viral load. Usually, a steady decline in CD4+ lymphocytes but no AIDS-defining conditions and CD4+ T lymphocyte count of 200-499 cells/mm3 </p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.vWH31pnbIh9guY8B61fsPQHaEW?w=285&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2> Stage2: Early symptomatic stage</h2>
+    <p> Without treatment, lasts for1e3years; any of thefollowing: PGL, fungal infections, vaginal yeast and trichomonal infections, oral hairy leukoplakia, herpeszoster, herpes simplex,HIVretinopathy.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.ycNpwqjt-uZ1PHzAaBiFTwHaDg?w=204&h=165&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Stage2: Early symptomatic stage</h2>
+    <p>Signs and symptoms increaseas CD4+ cell count declines and approaches 200/mm3; Viral load continues to increase.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.AburecFx-en-M51QEChgPwHaE8?w=236&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Stage3:AIDS</h2>
+    <p> Opportunistic infection(s): Pneumocystis jiroveci pneumonia, cryptococcosis, tuberculosis, toxoplasmosis, histoplasmosis, others.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.I9qrKZ3rLIg0oubd5-wJuAHaDH?w=343&h=147&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Stage3:AIDS</h2>
+    <p>Malignancies:Kaposi sarcoma,Burkitt lymphoma, nonHodgkin lymphoma, primaryCNSlymphoma, invasive cervical cancer, carcinoma of rectum, slim(wasting) disease.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://i.makeagif.com/media/12-03-2017/tvcj0o.gif" alt="">
+    <h2>AIDS</h2>
+    <p>High viral load;CD4+ T lymphocyte count is <200cells/mm3.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://img.particlenews.com/img/id/2mv1f7_0u1xRpto00?type=thumbnail_1600x1200" alt="">
+    <h2>HIV Regimens</h2>
+    <p> 3TC, lamivudine;ABC,abacavir;ATV,atazanavir;BIC,bictegravir; /c,boosted with cobicistat;DOR,doravirine;DRV,darunavir;DTG,dolutegravir;</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://www.laboratoriochile.cl/wp-content/uploads/2019/03/Efavirenz_600MG_30C_BE_Teva_HD.jpg" alt="">
+    <h2>HIV Regimens</h2>
+    <p>EVF, efavirenz; EVG, elvitigravir; FTC, emtricitabine; INSTI, integrase strand transfer inhibitor; NNRTI, nonnucleoside reverse transcriptase inhibitor;</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.pr_2VjKPMacyBQd6u7g0NgHaG1?w=230&h=212&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>HIV Regimens</h2>
+    <p>NRTI, nucleoside reverse transcriptase inhibitor; PI, protease inhibitor; /r, boosted with ritonavir; RAL, raltegravir; TAF, tenofovir alafenamide; TDF, tenofovir disoproxil fumarate.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.D091YbdQfNH_9vbFzNqVygHaGp?w=196&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>PostExposure ARV Prophylaxis</h2>
+    <p>Raltegravir (RAL) 400 mg PO Twice Daily PLUS Tenofovir DF (TDF) 300 mg/emtricitabine (FTC) 200 mg PO Once Daily</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.SEKZJtJlgqQicdCfR5KjkgHaEK?w=302&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>PREOPERATIVE RISK ASSESSMENT</h2>
+    <p>Review medical history, determine whether HIV infection exists, and discuss relevant issues with the patient.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://www.columbia-smiles.com/wp-content/uploads/2020/10/loose-permanent-teeth.jpeg" alt="">
+    <h2>PREOPERATIVE RISK ASSESSMENT</h2>
+    <p>If laboratory tests indicate patient is well controlled, routine dental procedures can be performed without special precautions.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://thenutritionalhealingcenter.com/wp-content/uploads/2015/08/nsaids-blog-ARC-web-1024x675.jpg" alt="">
+    <h2>Analgesics and drugs for neuropathic pain</h2>
+    <p>The risk for renal impairment of NSAIDs is potentially higher in patients taking TDF (tenofovir disoproxil fumarate). This does not contraindicate use of NSAIDs, but judicious use is warranted.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://www.heart.org/-/media/Images/News/Legacy-Images/Aspirin-bottle.jpg?h=334&w=502&sc_lang=en" alt="">
+    <h2>Aspirin and other NSAID</h2>
+    <p>Aspirin and other NSAID use can worsen bleeding in a patient who has thrombocytopenia.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.tYsRx5y1OIUUHZDSPQx26gHaE6?w=279&h=185&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Opioid metabolism</h2>
+    <p>Opioid metabolism (including tramadol) may be affected by co-administration with boosted ARVs(i.e., those containing ritonavir or cobicistat) or EFV resulting in either increased or, decreased opioid levels.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/R.11452121434edf8cdd7be924d6227f1c?rik=uYFHiBQzF0Fa9g&riu=http%3a%2f%2fimages.medscape.com%2fpi%2ffeatures%2fdrugdirectory%2foctupdate%2fWWW60530.jpg&ehk=V8sCFQQ5obTZL2yXf7SrilahwJrizpKBxm%2bwkpUrAdw%3d&risl=&pid=ImgRaw&r=0" alt="">
+    <h2>Opioid metabolism</h2>
+    <p>Meperidine is contraindicated in patients taking EFV because of seizure risk.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://i.pinimg.com/736x/f6/23/5e/f6235e274d972429ab71c4efa73e8798.jpg" alt="">
+    <h2>Antidepressants</h2>
+    <p>TCAs (tricyclic antidepressants) may interact with PIs to increase risk for arrhythmias.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.ImDMUdAdWY1UV_PzqptV8wHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    <h2>Carbamazepine</h2>
+    <p>Carbamazepine or oxcarbazepine may reduce ARVs levels (NNRTIs, boosted PIs, and RAL) and should be avoided.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/5mgrocheaus.jpg/440px-5mgrocheaus.jpg" alt="">
+    <h2>Diazepam</h2>
+    <p>Clonazepam, alprazolam, and diazepam levels will be increased by boosted ARVs (i.e., those drugs containing ritonavir or cobicistat).</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.hREI6zphuQYRCPevYoYdRAHaE8?w=257&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Antibiotics</h2>
+    <p>Prophylactic use not required unless severe neutropenia <500 cells/mm3 is present. Manage odontogenic infections with usual antibiotic regimens.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.25lI62spkIrJCZCShp3quQHaFg?w=229&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+    <h2>Bleeding</h2>
+    <p>Excessive bleeding may occur in patients with untreated or poorly controlled disease as a result of thrombocytopenia. Order CBC. Platelet counts <50,000 may require transfusion.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/R.741d7d2dc463a120ca06c373d31b1547?rik=4ivQUgwwo3lASQ&pid=ImgRaw&r=0" alt="">
+    <h2>Breathing</h2>
+    <p>Ensure that patient does not have a pulmonary infection. Delay treatment until pulmonary infections are resolved.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://my.clevelandclinic.org/-/scassets/Images/org/health/articles/17183-long-qt-syndrome" alt="">
+    <h2>Cardiovascular</h2>
+    <p>HIV-infected patients are at a higher risk for cardiovascular disease. Confirm cardiovascular status. Some ARVs, such as PIs, can increase risk for arrhythmias by extending QT prolongation.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://healthjade.com/wp-content/uploads/2019/03/cortisone-injection.jpg" alt="">
+    <h2>Drugs</h2>
+    <p>Systemic and injected corticosteroid levels (i.e., prednisolone, prednisone, dexamethasone, and triamcinolone (injected)) are increased by boosted ARVs.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.J9aSgE82JVVsuJ2PDmqSrwHaDt?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    <h2>Follow-up</h2>
+    <p>Routine and periodic follow-up evaluation is advised for HIV-infected patients. Request recent bloodwork and inspect for oral lesions to monitor for disease progression or ART failure.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.qtCMaSD87bS0_OqmfjVaLgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    <h2>Follow-up</h2>
+    <p>Patients in stage 2 or 3 may require more frequent follow-up and additional bloodwork investigations.</p>
+  </div>
+  
+  <div class="slide">
+    <img src="https://superbwishes.com/wp-content/uploads/2023/01/Thank-You-GIF-2.gif" alt="">
+    <h2>Thank you</h2>
+    <p>Thank you for your attention.</p>
+  </div>
+
+  <button id="playPauseBtn" class="control-btn">⏸</button>
+
+  <!-- Optional background music -->
+  <audio id="bgMusic" loop>
+    <source src="https://pixabay.com/music/upbeat-tutorial-educational-presentation-music-416477/" type="audio/mp3">
+  </audio>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const music = document.getElementById('bgMusic');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  let currentSlide = 0;
+  let playing = true;
+  let intervalTime = 6000; // 6 seconds per slide
+  let slideInterval;
+
+  // Start background music
+  music.volume = 0.4;
+  music.play().catch(() => {
+    console.log("Autoplay prevented, user interaction required");
+  });
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function startSlideshow() {
+    slideInterval = setInterval(nextSlide, intervalTime);
+    playPauseBtn.textContent = "⏸";
+    music.play();
+    playing = true;
+  }
+
+  function pauseSlideshow() {
+    clearInterval(slideInterval);
+    playPauseBtn.textContent = "▶";
+    music.pause();
+    playing = false;
+  }
+
+  playPauseBtn.addEventListener('click', () => {
+    if (playing) pauseSlideshow();
+    else startSlideshow();
+  });
+
+  // Start the show automatically
+  startSlideshow();
+</script>
+
+</body>
+</html>
